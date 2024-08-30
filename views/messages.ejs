@@ -1,0 +1,9 @@
+<div>
+    <b><%= message.user%>:</b>
+    <%= message.text%>
+    <p>
+        Sent: <%= message.added%>
+        <a href="/<%=message.user%>/<%=message.messageID%>">Expand message</a>
+        messageID: <%=message.messageID%>
+    </p>
+</div>
