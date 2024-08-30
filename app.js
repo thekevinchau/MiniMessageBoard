@@ -1,9 +1,8 @@
+require('dotenv').config()
+const port = process.env.PORT || 9001;
 const express = require('express');
 const app = express();
 const path = require('path');
-require('dotenv').config()
-const port = process.env.PORT;
-
 
 const messages = [
     {
@@ -62,7 +61,7 @@ app.get('*', (req, res) => {
 
 
 //listening
-app.listen(4002, (err) => {
+app.listen(port, (err) => {
     if (err) throw err;
-    console.log(`Listening on port 4002`)
+    console.log(`Listening on port ${port}`)
 })
